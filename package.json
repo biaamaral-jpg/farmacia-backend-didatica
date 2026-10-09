@@ -5,10 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "start": "node --loader ts-node/esm ./src/app.ts",
-    "dev": "nodemon"
+      "build": "tsc",
+    "start": "node dist/app.js"
+
   },
   "keywords": [],
   "author": "",
