@@ -173,3 +173,17 @@ SELECT * FROM v_produtos_alerta;
 -- RETURNING p.id_produto, p.descricao, p.qtd_estoque;
 
 SELECT * FROM venda;
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL,
+    exp BIGINT NOT NULL
+);
+
+INSERT INTO usuarios(nome, email, senha, role, exp)
+VALUES (
+'Administrador','admin@farmacia.com','admin','admin',1787731200
+);

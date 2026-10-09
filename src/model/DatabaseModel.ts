@@ -3,15 +3,13 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-
 export class DatabaseModel {
+    private static _instance: DatabaseModel;
     private _config: object;
-
     private _pool: pg.Pool;
-
     private _client: pg.Client;
 
-    constructor() {
+    private constructor() {
         this._config = {
             user: process.env.DB_USER,
             host: process.env.DB_HOST,
@@ -19,12 +17,18 @@ export class DatabaseModel {
             password: process.env.DB_PASSWORD,
             port: process.env.DB_PORT,
             max: 10,
-            idleTimoutMillis: 10000
+            idleTimeoutMillis: 10000
         }
 
         this._pool = new pg.Pool(this._config);
-
         this._client = new pg.Client(this._config);
+    }
+
+    public static getInstance(): DatabaseModel {
+        if (!DatabaseModel._instance) {
+            DatabaseModel._instance = new DatabaseModel();
+        }
+        return DatabaseModel._instance;
     }
 
     public async testeConexao() {

@@ -1,6 +1,6 @@
 import { DatabaseModel } from "./DatabaseModel.js";
 
-const database = new DatabaseModel().pool;
+const database = DatabaseModel.getInstance().pool;
 
 export class Produto {
     private idProduto?: number;
