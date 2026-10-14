@@ -1,7 +1,7 @@
 // src/model/ItemPedido.ts
 import { DatabaseModel } from "./DatabaseModel.js";
 
-const database = DatabaseModel.getInstance().pool;
+const database = new DatabaseModel().pool;
 
 export class ItemPedido {
   private idVenda: number;
