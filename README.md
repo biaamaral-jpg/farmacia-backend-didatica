@@ -22,7 +22,7 @@ Sua responsabilidade:
 
 - Fazer o DER
 
-- Interface de autenticação de usuário
+- Interface de autenticação de usuários
 
 - Interface principal do sistema 
   - Exibir nome do usuário logado
