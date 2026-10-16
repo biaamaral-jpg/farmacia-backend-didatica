@@ -1,4 +1,4 @@
-npm ci && npm run build
+
 
 # Farmácia Didática
 
