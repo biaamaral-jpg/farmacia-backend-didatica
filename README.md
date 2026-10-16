@@ -1,3 +1,5 @@
+npm ci && npm run build
+
 # Farmácia Didática
 
 Projeto destinado a ensinar a fazer controle de um estoque, exemplo didático que não é atende totalmente a uma aplicação de mercado, vários atributos foram deixados de lado afim de facilitar e agilizar o processo.
